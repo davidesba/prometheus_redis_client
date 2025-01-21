@@ -161,7 +161,6 @@ class Summary(Metric):
     def observe(self, value, labels=None):
         labels = labels or {}
         self._check_labels(labels)
-        print('DEBUG:', value, labels)
         return self._observer(value, labels)
 
     @silent_wrapper
